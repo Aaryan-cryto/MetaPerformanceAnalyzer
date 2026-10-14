@@ -1,0 +1,27 @@
+project:
+  name: "Meta-Learning Performance Analyzer"
+  version: "1.0.0"
+
+paths:
+  data:
+    raw: "data/raw/"
+    processed: "data/processed/"
+    meta_data: "data/meta_data/"
+  outputs:
+    models: "outputs/models/"
+    reports: "outputs/reports/"
+    plots: "outputs/plots/"
+
+parameters:
+  meta_models:
+    mlp:
+      hidden_layer_sizes: [64, 32]
+      max_iter: 500
+      random_state: 42
+    rf:
+      n_estimators: 100
+      random_state: 42
+
+  sensitivity_analysis:
+    rf_n_estimators: [10, 50, 100, 200]
+    rf_max_depth: [None, 5, 10, 20]
